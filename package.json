@@ -1,0 +1,80 @@
+{
+  "name": "@oskolok/team-osk-ui-rt",
+  "version": "0.0.0",
+  "description": "React UI библиотека компонентов",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o storybook-static",
+    "build": "tsup",
+    "prepublishOnly": "npm run build",
+    "debug-build": "npm run build-storybook && ls -la storybook-static/assets/ | grep css",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "library",
+    "typescript"
+  ],
+  "author": "Oskolok",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oskolochek/team-osk-ui-rt.git"
+  },
+  "homepage": "https://github.com/Oskolochek/team-osk-ui-rt#readme",
+  "bugs": {
+    "url": "https://github.com/Oskolochek/team-osk-ui-rt/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^19.1.2",
+    "react-dom": "^19.1.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.11",
+    "@storybook/addon-interactions": "^8.6.11",
+    "@storybook/addon-links": "^8.6.11",
+    "@storybook/blocks": "^8.6.11",
+    "@storybook/react": "^8.6.11",
+    "@storybook/react-vite": "^8.6.11",
+    "@storybook/test": "^8.6.11",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.3.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.24",
+    "fs-extra": "^11.3.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "postcss": "^8.5.6",
+    "postcss-modules": "^6.0.1",
+    "react": "^19.1.2",
+    "react-dom": "^19.1.2",
+    "sass": "^1.86.3",
+    "storybook": "^8.6.11",
+    "ts-jest": "^29.4.6",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6"
+  },
+  "dependencies": {
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.8"
+  }
+}
