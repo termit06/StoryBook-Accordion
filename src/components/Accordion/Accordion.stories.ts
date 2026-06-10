@@ -8,14 +8,27 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
-  argTypes: {},
-    args: {
-        multiple: false,
+  argTypes: {
+    tabs: {
+      control: 'object'
+    },
+    multiple: {
+      description:"Открывает несколько заголовки при помощи props",
+      control:'boolean',
+    },
+    disabled: {
+      description:"Отключает все заголовки с помощью props",
+      control: 'boolean',
+    }
+  },
+  args: {
+    multiple: true,
+    disabled: false,
     tabs: [
       { header: "Заголовок 1", children: "Описание 1" },
       { header: "Заголовок 2", children: "Описание 2" },
       { header: "Заголовок 3", children: "Описание 3" },
-      { header: "Заголовок 4", children: "Описание 4", disabled: true},
+      { header: "Заголовок 4", children: "Описание 4" }
     ],
   },
 };
